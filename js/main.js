@@ -81,6 +81,10 @@
 
   function detectLang() {
     try {
+      var param = new URLSearchParams(location.search).get("lang");
+      if (param && I18N[param]) return param;
+    } catch (e) { /* URLSearchParams unavailable */ }
+    try {
       var saved = localStorage.getItem(LS_KEY);
       if (saved && I18N[saved]) return saved;
     } catch (e) { /* storage unavailable */ }

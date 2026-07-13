@@ -48,9 +48,20 @@ gh secret set CLOUDFLARE_API_TOKEN --repo vo1dee/ts-vo1dee-portal
 
 ### Custom domain — important caveat
 
-Do **not** attach `ts.vo1dee.com` itself as the Pages custom domain: that would repoint its
-DNS to Cloudflare's proxy, and TeamSpeak/Project Zomboid clients (raw UDP 9987/16261) would
-no longer reach the game host. Keep `ts.vo1dee.com` as a DNS-only record pointing at the game
-server, and attach the portal to another hostname instead (e.g. `vo1dee.com` or
-`portal.vo1dee.com`) via Pages → **Custom domains**. The guides on the page always tell
-players to connect to `ts.vo1dee.com`, so the portal works from any hostname.
+Attaching `ts.vo1dee.com` itself as the Pages custom domain repoints its DNS to Cloudflare's
+HTTP proxy, and TeamSpeak/Project Zomboid clients (raw UDP 9987/16261) would no longer reach
+the game host — Cloudflare's proxy only carries web traffic. Options, best first:
+
+1. **Different hostname for the portal** (recommended): keep `ts.vo1dee.com` DNS-only →
+   game host; attach e.g. `portal.vo1dee.com` or `vo1dee.com` via Pages → **Custom domains**.
+   The guides tell players to connect to `ts.vo1dee.com` regardless of where the portal lives.
+2. **Serve the portal from the game host**: keep `ts.vo1dee.com` DNS-only and run
+   nginx/Caddy on the game box serving this repo's files on 80/443. Same address for
+   everything, but it's not Cloudflare Pages hosting.
+3. **SRV trick (fixes TeamSpeak only)**: proxy `ts.vo1dee.com` for the portal and add a
+   DNS-only `direct.vo1dee.com` → game host plus an SRV record
+   `_ts3._udp.ts.vo1dee.com` → `direct.vo1dee.com:9987`. TeamSpeak clients resolve the SRV
+   and keep working — but Project Zomboid doesn't use SRV, so players would have to join via
+   `direct.vo1dee.com:16261`.
+
+The site supports `?lang=en` / `?lang=uk` URLs for direct links to a specific language.
