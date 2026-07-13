@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ts.vo1dee.com — Server Hub</title>
+  <meta name="description" content="TeamSpeak voice server and Project Zomboid dedicated server at ts.vo1dee.com — connection guides in English and Ukrainian.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6fd0'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3Ets%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <span class="brand-badge">ts</span>
+      <span>ts.vo1dee.com</span>
+    </a>
+    <div class="lang-switch" role="group" aria-label="Language / Мова">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="uk" aria-pressed="false">УКР</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Community server hub</p>
+      <h1 data-i18n="hero.title">One address. Two servers.</h1>
+      <p class="hero-sub" data-i18n="hero.sub"></p>
+    </section>
+
+    <section class="services" aria-labelledby="services-title">
+      <h2 id="services-title" data-i18n="services.title">What's running here</h2>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-head">
+            <h3>TeamSpeak</h3>
+            <span class="kind" data-i18n="svc.ts.kind">Voice server</span>
+          </div>
+          <p data-i18n="svc.ts.desc"></p>
+          <div class="address-row">
+            <code>ts.vo1dee.com</code>
+            <button class="copy-btn" type="button" data-copy="ts.vo1dee.com" data-i18n="copy">Copy</button>
+          </div>
+          <a class="jump" href="#guide-ts" data-i18n="svc.link">Connection guide ↓</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Project Zomboid</h3>
+            <span class="kind" data-i18n="svc.pz.kind">Dedicated game server</span>
+          </div>
+          <p data-i18n="svc.pz.desc"></p>
+          <div class="address-row">
+            <code>ts.vo1dee.com:16261</code>
+            <button class="copy-btn" type="button" data-copy="ts.vo1dee.com" data-i18n="copy">Copy</button>
+          </div>
+          <a class="jump" href="#guide-pz" data-i18n="svc.link">Connection guide ↓</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide" id="guide-ts" aria-labelledby="guide-ts-title">
+      <h2 id="guide-ts-title" data-i18n="guide.ts.title">How to connect — TeamSpeak</h2>
+      <div class="tabs">
+        <button type="button" data-panel="panel-ts3" aria-pressed="true">TeamSpeak 3</button>
+        <button type="button" data-panel="panel-ts6" aria-pressed="false">TeamSpeak 6</button>
+      </div>
+      <div id="panel-ts3">
+        <ol class="steps">
+          <li data-i18n="ts3.s1"></li>
+          <li data-i18n="ts3.s2"></li>
+          <li data-i18n="ts3.s3"></li>
+          <li data-i18n="ts3.s4"></li>
+          <li data-i18n="ts3.s5"></li>
+        </ol>
+      </div>
+      <div id="panel-ts6" hidden>
+        <ol class="steps">
+          <li data-i18n="ts6.s1"></li>
+          <li data-i18n="ts6.s2"></li>
+          <li data-i18n="ts6.s3"></li>
+          <li data-i18n="ts6.s4"></li>
+        </ol>
+        <p class="note" data-i18n="ts6.note"></p>
+      </div>
+    </section>
+
+    <section class="guide" id="guide-pz" aria-labelledby="guide-pz-title">
+      <h2 id="guide-pz-title" data-i18n="guide.pz.title">How to connect — Project Zomboid</h2>
+      <ol class="steps">
+        <li data-i18n="pz.s1"></li>
+        <li data-i18n="pz.s2"></li>
+        <li data-i18n="pz.s3"></li>
+        <li data-i18n="pz.s4"></li>
+        <li data-i18n="pz.s5"></li>
+        <li data-i18n="pz.s6"></li>
+      </ol>
+      <p class="note" data-i18n="pz.note"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.line">Maintained by vo1dee</p>
+    <a href="https://github.com/vo1dee/ts-vo1dee-portal" target="_blank" rel="noopener" data-i18n="footer.src">Source on GitHub</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
