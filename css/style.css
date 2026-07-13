@@ -280,6 +280,29 @@ main h2 {
   color: var(--accent-ink);
 }
 
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card-actions .jump { margin-left: auto; }
+
+.connect-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.connect-btn:hover { background: var(--accent-strong); }
+
 .jump {
   color: var(--accent);
   text-decoration: none;
