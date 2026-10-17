@@ -1,8 +1,8 @@
 # ts.vo1dee.com — Server Hub portal
 
-Static landing page for **ts.vo1dee.com**: explains what runs at that address (a TeamSpeak
-voice server and a Project Zomboid dedicated server) and walks visitors through connecting —
-TeamSpeak 3, TeamSpeak 6, and Project Zomboid. Localized in English and Ukrainian
+Static portal for **ts.vo1dee.com**: the home page walks visitors through connecting to the
+TeamSpeak server (TS3 and TS6); a separate Project Zomboid page is reachable from the menu.
+Localized in English and Ukrainian
 (toggle in the header, remembered in `localStorage`, auto-detected from the browser language
 on first visit).
 

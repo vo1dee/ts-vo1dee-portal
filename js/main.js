@@ -5,12 +5,17 @@
 
   var I18N = {
     en: {
-      "doc.title": "ts.vo1dee.com — Server Hub",
-      "hero.eyebrow": "Community server hub",
-      "hero.title": "Talk on TeamSpeak. Survive in Project Zomboid.",
-      "hero.sub": "Home of our TeamSpeak voice server and Project Zomboid dedicated server. Grab an address below, follow a guide, and jump in.",
-      "services.title": "What's running here",
-      "svc.ts.kind": "Voice server",
+      "doc.title": "ts.vo1dee.com — TeamSpeak",
+      "doc.title.pz": "Project Zomboid — ts.vo1dee.com",
+      "nav.ts": "TeamSpeak",
+      "nav.pz": "Project Zomboid",
+      "pzhero.eyebrow": "Game server",
+      "pzhero.title": "Survive with us in Knox Country.",
+      "services.title": "Server address",
+      "hero.eyebrow": "TeamSpeak server",
+      "hero.title": "Join our TeamSpeak server.",
+      "hero.sub": "Voice chat for the crew. Grab the address below, follow the guide for your client, and jump in.",
+            "svc.ts.kind": "Voice server",
       "svc.ts.desc": "Voice chat for the crew. Works with both the classic TeamSpeak 3 client and the new TeamSpeak 6.",
       "svc.pz.kind": "Dedicated game server",
       "svc.pz.desc": "Co-op survival in Knox Country. Add the server to your favorites and join your friends.",
@@ -37,16 +42,21 @@
       "pz.s5": "Choose an account name and password — the account is created on your first join, so remember the password.",
       "pz.s6": "Click <b>Save</b>, select the server in the list and hit <b>Join</b>.",
       "pz.note": "If the server runs Workshop mods, they download automatically — the first join can take a few minutes.",
-      "footer.line": "Maintained by vo1dee · Find us on the TeamSpeak server",
+      "footer.line": "Maintained by vo1dee",
       "footer.src": "Source on GitHub"
     },
     uk: {
-      "doc.title": "ts.vo1dee.com — хаб серверів",
-      "hero.eyebrow": "Сервери спільноти",
-      "hero.title": "Спілкуйся в TeamSpeak. Виживай у Project Zomboid.",
-      "hero.sub": "Тут живуть наш голосовий сервер TeamSpeak і виділений сервер Project Zomboid. Скопіюй адресу нижче, скористайся інструкцією — і приєднуйся.",
-      "services.title": "Що тут працює",
-      "svc.ts.kind": "Голосовий сервер",
+      "doc.title": "ts.vo1dee.com — TeamSpeak",
+      "doc.title.pz": "Project Zomboid — ts.vo1dee.com",
+      "nav.ts": "TeamSpeak",
+      "nav.pz": "Project Zomboid",
+      "pzhero.eyebrow": "Ігровий сервер",
+      "pzhero.title": "Виживай з нами в окрузі Нокс.",
+      "services.title": "Адреса сервера",
+      "hero.eyebrow": "Сервер TeamSpeak",
+      "hero.title": "Приєднуйся до нашого TeamSpeak.",
+      "hero.sub": "Голосовий чат для компанії. Скопіюй адресу нижче, скористайся інструкцією для свого клієнта — і приєднуйся.",
+            "svc.ts.kind": "Голосовий сервер",
       "svc.ts.desc": "Голосовий чат для компанії. Працює і з класичним клієнтом TeamSpeak 3, і з новим TeamSpeak 6.",
       "svc.pz.kind": "Виділений ігровий сервер",
       "svc.pz.desc": "Кооперативне виживання в окрузі Нокс. Додай сервер в обрані та приєднуйся до друзів.",
@@ -73,7 +83,7 @@
       "pz.s5": "Вигадай ім’я користувача та пароль — акаунт створюється під час першого входу, тож запам’ятай пароль.",
       "pz.s6": "Натисни <b>Save</b>, вибери сервер у списку та натисни <b>Join</b>.",
       "pz.note": "Якщо на сервері є моди з Workshop, вони завантажаться автоматично — перший вхід може тривати кілька хвилин.",
-      "footer.line": "Підтримує vo1dee · Шукай нас на сервері TeamSpeak",
+      "footer.line": "Підтримує vo1dee",
       "footer.src": "Код на GitHub"
     }
   };
@@ -98,7 +108,7 @@
     lang = code;
     var dict = I18N[code];
     document.documentElement.lang = code;
-    document.title = dict["doc.title"];
+    document.title = dict[document.body.dataset.title || "doc.title"];
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var key = el.getAttribute("data-i18n");
       if (dict[key]) el.innerHTML = dict[key];

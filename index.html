@@ -4,16 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ts.vo1dee.com — Server Hub</title>
-  <meta name="description" content="TeamSpeak voice server and Project Zomboid dedicated server at ts.vo1dee.com — connection guides in English and Ukrainian.">
+  <meta name="description" content="Connect to the ts.vo1dee.com TeamSpeak server — guides for TeamSpeak 3 and 6 in English and Ukrainian.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6fd0'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3Ets%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-title="doc.title">
   <header class="site-header">
     <a class="brand" href="/">
       <span class="brand-badge">ts</span>
       <span>ts.vo1dee.com</span>
     </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/" data-i18n="nav.ts" aria-current="page">TeamSpeak</a>
+      <a href="pz.html" data-i18n="nav.pz">Project Zomboid</a>
+    </nav>
     <div class="lang-switch" role="group" aria-label="Language / Мова">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="uk" aria-pressed="false">УКР</button>
@@ -22,43 +26,28 @@
 
   <main>
     <section class="hero">
-      <p class="eyebrow" data-i18n="hero.eyebrow">Community server hub</p>
-      <h1 data-i18n="hero.title">Talk on TeamSpeak. Survive in Project Zomboid.</h1>
+      <p class="eyebrow" data-i18n="hero.eyebrow">TeamSpeak server</p>
+      <h1 data-i18n="hero.title">Join our TeamSpeak server.</h1>
       <p class="hero-sub" data-i18n="hero.sub"></p>
     </section>
 
     <section class="services" aria-labelledby="services-title">
-      <h2 id="services-title" data-i18n="services.title">What's running here</h2>
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-head">
-            <h3>TeamSpeak</h3>
-            <span class="kind" data-i18n="svc.ts.kind">Voice server</span>
-          </div>
-          <p data-i18n="svc.ts.desc"></p>
-          <div class="address-row">
-            <code>ts.vo1dee.com</code>
-            <button class="copy-btn" type="button" data-copy="ts.vo1dee.com" data-i18n="copy">Copy</button>
-          </div>
-          <div class="card-actions">
-            <a class="connect-btn" href="ts3server://ts.vo1dee.com?port=9987" data-i18n="connect">Connect</a>
-            <a class="jump" href="#guide-ts" data-i18n="svc.link">Connection guide ↓</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <h3>Project Zomboid</h3>
-            <span class="kind" data-i18n="svc.pz.kind">Dedicated game server</span>
-          </div>
-          <p data-i18n="svc.pz.desc"></p>
-          <div class="address-row">
-            <code>pz.vo1dee.com:16261</code>
-            <button class="copy-btn" type="button" data-copy="pz.vo1dee.com" data-i18n="copy">Copy</button>
-          </div>
-          <a class="jump" href="#guide-pz" data-i18n="svc.link">Connection guide ↓</a>
-        </article>
-      </div>
+      <h2 id="services-title" class="sr-only" data-i18n="services.title">Server address</h2>
+      <article class="card">
+        <div class="card-head">
+          <h3>TeamSpeak</h3>
+          <span class="kind" data-i18n="svc.ts.kind">Voice server</span>
+        </div>
+        <p data-i18n="svc.ts.desc"></p>
+        <div class="address-row">
+          <code>ts.vo1dee.com</code>
+          <button class="copy-btn" type="button" data-copy="ts.vo1dee.com" data-i18n="copy">Copy</button>
+        </div>
+        <div class="card-actions">
+          <a class="connect-btn" href="ts3server://ts.vo1dee.com?port=9987" data-i18n="connect">Connect</a>
+          <a class="jump" href="#guide-ts" data-i18n="svc.link">Connection guide ↓</a>
+        </div>
+      </article>
     </section>
 
     <section class="guide" id="guide-ts" aria-labelledby="guide-ts-title">
@@ -87,18 +76,6 @@
       </div>
     </section>
 
-    <section class="guide" id="guide-pz" aria-labelledby="guide-pz-title">
-      <h2 id="guide-pz-title" data-i18n="guide.pz.title">How to connect — Project Zomboid</h2>
-      <ol class="steps">
-        <li data-i18n="pz.s1"></li>
-        <li data-i18n="pz.s2"></li>
-        <li data-i18n="pz.s3"></li>
-        <li data-i18n="pz.s4"></li>
-        <li data-i18n="pz.s5"></li>
-        <li data-i18n="pz.s6"></li>
-      </ol>
-      <p class="note" data-i18n="pz.note"></p>
-    </section>
   </main>
 
   <footer class="site-footer">
